@@ -4,7 +4,7 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
 
 ---
 
-## 🚀 Technologies Used
+## Technologies Used
 
 - **React** – Frontend library
 - **TypeScript** – Safe, scalable code
@@ -17,9 +17,9 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
 
 ---
 
-## 👥 Roles & Dashboards
+## Roles & Dashboards
 
-### 1️⃣ Customer Dashboard
+### Customer Dashboard
 
 - Access menu directly (no login required; e.g., via QR code)
 - View meals and drinks:
@@ -37,14 +37,9 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
   5. Right-side cart panel: items, quantity, remove, checkout
 - Fully responsive & RTL
 
-**Image Placeholders:**  
-![Hero Banner](https://via.placeholder.com/800x300)  
-![Product Card](https://via.placeholder.com/250x250)  
-![Category Slider](https://via.placeholder.com/600x100)
-
 ---
 
-### 2️⃣ Cashier Dashboard
+### Cashier Dashboard
 
 - See new orders instantly
 - Full price breakdown:
@@ -54,13 +49,9 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
   - Customer name, table number, date/time, items, quantities, prices, tax, service, total
 - Close orders & trigger customer rating popup
 
-**Image Placeholders:**  
-![Cashier Orders](https://via.placeholder.com/800x400)  
-![Invoice Preview](https://via.placeholder.com/600x400)
-
 ---
 
-### 3️⃣ Kitchen Dashboard
+### Kitchen Dashboard
 
 - Real-time order updates (React Query polling)
 - Orders include table number, items, quantities
@@ -69,12 +60,9 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
 - Set estimated preparation time
 - All updates reflect in Cashier & Admin dashboards instantly
 
-**Image Placeholders:**  
-![Kitchen Orders](https://via.placeholder.com/800x400)
-
 ---
 
-### 4️⃣ Admin Dashboard
+### Admin Dashboard
 
 - Full control over the system:
   - Add/Edit/Delete meals & drinks
@@ -92,10 +80,6 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
   - All invoices, completed orders
   - Filter by date
   - Monthly financial summary & statistics
-
-**Image Placeholders:**  
-![Admin Analytics](https://via.placeholder.com/800x400)  
-![Admin Product Management](https://via.placeholder.com/800x400)
 
 ---
 
@@ -138,7 +122,7 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
 
 ---
 
-## 💻 How to Run
+## How to Run
 
 1. Clone the repo:
    ```bash
