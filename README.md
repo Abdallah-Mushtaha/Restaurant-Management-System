@@ -1,4 +1,4 @@
-# Project: Restaurant Management System "Mazaq"
+# Project: Restaurant Management System "Mat'amna"
 
 Comprehensive, large-scale restaurant management system fully in Arabic (RTL support) with modern dashboards for different roles.
 
