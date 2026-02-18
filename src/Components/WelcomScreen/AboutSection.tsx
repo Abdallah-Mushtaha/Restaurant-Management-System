@@ -69,10 +69,10 @@ const AboutSection = ({ aboutRef }: Props) => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-              <button className="bg-gray-900 text-white px-10 py-5 rounded-full font-black text-lg shadow-xl active:scale-95 transition-all cursor-pointer">
+              <button className="bg-gray-900 text-white cursor-pointer px-10 py-5 rounded-full font-black text-lg shadow-xl active:scale-95 transition-all">
                 اقرأ المزيد
               </button>
-              <button className="bg-orange-500 text-white px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-orange-500/20 active:scale-95 transition-all cursor-pointer">
+              <button className="bg-orange-500 cursor-pointer text-white cursor-pointer px-10 py-5 rounded-full font-black text-lg shadow-xl shadow-orange-500/20 active:scale-95 transition-all">
                 احجز طاولة
               </button>
             </div>

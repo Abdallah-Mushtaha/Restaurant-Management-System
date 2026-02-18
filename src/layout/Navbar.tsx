@@ -1,5 +1,6 @@
 import { ShoppingBag } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router";
 
 interface Props {
   scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const Navbar = ({ scrollToSection, homeRef, dishesRef, aboutRef }: Props) => {
+  const navigate = useNavigate();
   return (
     <nav className="fixed top-4 md:top-6 inset-x-0 z-[100] px-4 md:px-6">
       <div className="container mx-auto max-w-6xl bg-white/80 backdrop-blur-xl border border-white/40 shadow-lg rounded-full md:rounded-[32px] px-6 md:px-8 py-3 md:py-4 flex justify-between items-center transition-all">
@@ -27,13 +29,13 @@ const Navbar = ({ scrollToSection, homeRef, dishesRef, aboutRef }: Props) => {
         <div className="hidden md:flex gap-10 font-black text-sm text-gray-500 uppercase">
           <button
             onClick={() => scrollToSection(homeRef)}
-            className="hover:text-orange-500 transition-colors cursor-pointer cursor-pointer"
+            className="hover:text-orange-500 transition-colors  cursor-pointer"
           >
             الرئيسية
           </button>
           <button
             onClick={() => scrollToSection(dishesRef)}
-            className="hover:text-orange-500 transition-colors cursor-pointer"
+            className="hover:text-orange-500  transition-colors cursor-pointer"
           >
             الأكثر طلباً
           </button>
@@ -45,7 +47,12 @@ const Navbar = ({ scrollToSection, homeRef, dishesRef, aboutRef }: Props) => {
           </button>
         </div>
 
-        <button className="bg-gray-900 text-white px-5 md:px-8 py-2.5 md:py-3.5 rounded-full md:rounded-[20px] text-sm md:text-base font-black hover:bg-orange-600 transition-all active:scale-95 cursor-pointer">
+        <button
+          onClick={() => {
+            navigate("/order");
+          }}
+          className="bg-gray-900 text-white px-5 md:px-8 py-2.5 md:py-3.5 rounded-full md:rounded-[20px] text-sm md:text-base font-black hover:bg-orange-600 transition-all active:scale-95 cursor-pointer "
+        >
           اطلب الآن
         </button>
       </div>
