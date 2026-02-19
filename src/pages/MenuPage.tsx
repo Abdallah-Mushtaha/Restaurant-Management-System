@@ -9,6 +9,7 @@ import { BentoOffers } from "../Components/MenuComponents/BentoOffers";
 import { MenuFilters } from "../Components/MenuComponents/MenuFilters";
 import { FloatingCart } from "../Components/MenuComponents/MenuComponents";
 import { MenuCard } from "../Components/MenuComponents/MenuCard";
+import { MenuSkeleton } from "../Components/MenuComponents/MenuSkeleton";
 
 export default function MenuPage() {
   const navigate = useNavigate();
@@ -49,12 +50,7 @@ export default function MenuPage() {
     });
   }, [menu, activeCategory, searchQuery]);
 
-  if (isLoading)
-    return (
-      <div className="h-screen flex items-center justify-center bg-white">
-        <Loader2 className="w-12 h-12 text-orange-600 animate-spin" />
-      </div>
-    );
+  if (isLoading) return <MenuSkeleton />;
 
   return (
     <div
@@ -87,7 +83,8 @@ export default function MenuPage() {
             <div className="w-2 h-6 bg-orange-600 rounded-full" />
             {activeCategory}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             <AnimatePresence mode="popLayout">
               {filteredMenu.map((item: any) => (
                 <motion.div

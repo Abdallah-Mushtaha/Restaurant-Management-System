@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { ordersApi } from "../api/axios";
-import DashboardLayout from "../Components/DashboardLayout";
-import CompletedCard from "../Components/KitchenDashboard/CompletedCard";
+import { ordersApi } from "../../api/axios";
+import DashboardLayout from "../DashboardLayout";
+import CompletedCard from "./CompletedCard";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCheck, Search, History, Loader2 } from "lucide-react";
 

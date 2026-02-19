@@ -10,9 +10,12 @@ import MenuPage from "./pages/MenuPage.tsx";
 import CartPage from "./pages/CartPage.tsx";
 import Login from "./pages/Login.tsx";
 import KitchenDashboard from "./pages/KitchenDashboard.tsx";
-import NewOrders from "./pages/NewOrders.tsx";
-import PreparingOrders from "./pages/PreparingOrders.tsx";
-import CompletedOrders from "./pages/CompletedOrders.tsx";
+import NewOrders from "./Components/KitchenDashboard/NewOrders.tsx";
+import PreparingOrders from "./Components/KitchenDashboard/PreparingOrders.tsx";
+import CompletedOrders from "./Components/KitchenDashboard/CompletedOrders.tsx";
+import CashierDashboard from "./pages/CashierDashboard.tsx";
+import SalesDashboard from "./Components/CashierDashboard/SalesDashboard.tsx";
+import CashierStats from "./Components/CashierDashboard/CashierStats.tsx";
 
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
@@ -44,6 +47,39 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/kitchen/new" element={<NewOrders />} />
           <Route path="/kitchen/preparing" element={<PreparingOrders />} />
           <Route path="/kitchen/completed" element={<CompletedOrders />} />
+          <Route
+            path="/cashier"
+            element={
+              <CashierDashboard
+                onLogout={() => {
+                  localStorage.clear();
+                  window.location.href = "/login";
+                }}
+              />
+            }
+          />
+          <Route
+            path="/cashier/sales"
+            element={
+              <SalesDashboard
+                onLogout={() => {
+                  localStorage.clear();
+                  window.location.href = "/login";
+                }}
+              />
+            }
+          />
+          <Route
+            path="/cashier/stats"
+            element={
+              <CashierStats
+                onLogout={() => {
+                  localStorage.clear();
+                  window.location.href = "/login";
+                }}
+              />
+            }
+          />
         </Routes>
       </QueryClientProvider>
     </StrictMode>

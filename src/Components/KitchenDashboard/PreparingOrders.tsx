@@ -1,11 +1,12 @@
 import { useCallback } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { ordersApi } from "../api/axios";
-import DashboardLayout from "../Components/DashboardLayout";
-import PreparingCard from "../Components/KitchenDashboard/PreparingCard";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { Flame, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { ordersApi } from "../../api/axios";
+import DashboardLayout from "../DashboardLayout";
+import PreparingCard from "./PreparingCard";
 
 export default function PreparingOrders() {
   const queryClient = useQueryClient();

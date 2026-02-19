@@ -1,8 +1,8 @@
-import { useMemo, useCallback } from "react";
+import { useCallback } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { ordersApi } from "../api/axios";
-import DashboardLayout from "../Components/DashboardLayout";
-import OrderCard from "../Components/KitchenDashboard/OrderCard";
+import { ordersApi } from "../../api/axios";
+import DashboardLayout from "../DashboardLayout";
+import { OrderCard } from "./OrderCard";
 import { AnimatePresence } from "framer-motion";
 import { Inbox, RefreshCw } from "lucide-react";
 

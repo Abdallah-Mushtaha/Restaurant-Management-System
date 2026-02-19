@@ -1,11 +1,8 @@
-import { useState, memo, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useMemo, useCallback } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
-  LogOut,
   Menu,
-  X,
   Settings,
-  User as UserIcon,
   LayoutDashboard,
   UtensilsCrossed,
   Layers,
@@ -13,45 +10,20 @@ import {
   ClipboardList,
   Bell,
   Flame,
-  Timer,
   CheckCircle,
+  Timer,
   BarChart3,
-  ChefHat,
 } from "lucide-react";
 import { toast } from "sonner";
 import { motion, AnimatePresence } from "framer-motion";
+import Sidebar from "./DashboardLayout/Sidebar";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
   title: string;
   subtitle?: string;
-  onLogout: () => void;
+  onLogout?: () => void;
 }
-
-const NavItem = memo(({ label, icon, onClick, active }: any) => (
-  <button
-    onClick={onClick}
-    className={`w-full flex items-center justify-between px-4 py-4 rounded-[1.5rem] transition-all duration-300 group ${
-      active
-        ? "bg-orange-600 text-white shadow-lg shadow-orange-200"
-        : "text-gray-500 hover:bg-orange-50 hover:text-orange-600"
-    }`}
-  >
-    <div className="flex items-center gap-4">
-      <span
-        className={`text-xl ${!active && "group-hover:scale-110"} transition-transform`}
-      >
-        {icon}
-      </span>
-      <span className="font-bold text-sm">{label}</span>
-    </div>
-    {label.includes("(") && (
-      <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full font-black">
-        !
-      </span>
-    )}
-  </button>
-));
 
 export default function DashboardLayout({
   children,
@@ -60,6 +32,7 @@ export default function DashboardLayout({
   onLogout,
 }: DashboardLayoutProps) {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const user = useMemo(
@@ -102,11 +75,7 @@ export default function DashboardLayout({
             icon: <ClipboardList size={20} />,
             path: "/kitchen",
           },
-          {
-            label: "الجديدة ",
-            icon: <Bell size={20} />,
-            path: "/kitchen/new",
-          },
+          { label: "الجديدة ", icon: <Bell size={20} />, path: "/kitchen/new" },
           {
             label: "قيد التحضير ",
             icon: <Flame size={20} />,
@@ -125,17 +94,17 @@ export default function DashboardLayout({
           {
             label: "الطلبات المعلقة",
             icon: <Timer size={20} />,
-            path: "/order",
+            path: "/cashier",
           },
           {
             label: "المبيعات المنجزة",
             icon: <CheckCircle size={20} />,
-            path: "/sales",
+            path: "/cashier/sales",
           },
           {
             label: "الإحصائيات",
             icon: <BarChart3 size={20} />,
-            path: "/stats",
+            path: "/cashier/stats",
           },
         ],
       },
@@ -143,78 +112,37 @@ export default function DashboardLayout({
     return configs[user.role] || configs.admin;
   }, [user.role]);
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+
+    onLogout?.();
+
     toast.success("تم تسجيل الخروج");
-    onLogout();
-    navigate("/login");
-  };
 
-  const SidebarContent = () => (
-    <>
-      <div className="p-8">
-        <div className="flex items-center gap-4 mb-12">
-          <div className="w-12 h-12 bg-gray-200/50 rounded-[1.2rem] flex items-center justify-center shadow-lg shadow-gray-300">
-            <ChefHat size={20} className="text-orange-500" />
-          </div>
-          <div>
-            <h2 className="font-black text-xl text-gray-900 leading-none">
-              مطعمنا
-            </h2>
-            <span className="text-[10px] text-orange-600 font-bold tracking-widest uppercase">
-              بريميم
-            </span>
-          </div>
-        </div>
+    navigate("/login", { replace: true });
+  }, [onLogout, navigate]);
 
-        <nav className="space-y-2">
-          {menuConfig.items.map((item: any, index: number) => (
-            <NavItem
-              key={index}
-              {...item}
-              active={window.location.pathname === item.path}
-              onClick={() => {
-                navigate(item.path);
-                setIsMobileOpen(false);
-              }}
-            />
-          ))}
-        </nav>
-      </div>
-
-      <div className="mt-auto p-6 space-y-4">
-        <div className="bg-gray-50 rounded-[2rem] p-5 border border-gray-100">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-white border-2 border-orange-500 flex items-center justify-center shrink-0">
-              <UserIcon size={18} className="text-orange-600" />
-            </div>
-            <div className="overflow-hidden">
-              <p className="font-black text-[13px] text-gray-900 truncate leading-none mb-1">
-                {menuConfig.roleName}
-              </p>
-              <p className="text-[10px] text-gray-400 truncate font-medium">
-                {user.email}
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-3 bg-rose-50 text-rose-600 font-black py-4 rounded-[1.5rem] hover:bg-rose-600 hover:text-white transition-all duration-300 group"
-        >
-          <LogOut
-            size={18}
-            className="group-hover:-translate-x-1 transition-transform"
-          />
-          <span className="text-sm">تسجيل الخروج</span>
-        </button>
-      </div>
-    </>
+  const handleNavigate = useCallback(
+    (path: string) => {
+      if (location.pathname !== path) {
+        navigate(path);
+      }
+      setIsMobileOpen(false);
+    },
+    [navigate, location.pathname],
   );
 
   return (
     <div dir="rtl" className="min-h-screen bg-[#F8F9FD] flex overflow-hidden">
       <aside className="hidden lg:flex w-[300px] bg-white border-l border-gray-100 flex-col sticky top-0 h-screen z-50">
-        <SidebarContent />
+        <Sidebar
+          menuConfig={menuConfig}
+          user={user}
+          activePath={location.pathname}
+          onNavigate={handleNavigate}
+          onLogout={handleLogout}
+        />
       </aside>
 
       <AnimatePresence>
@@ -234,7 +162,13 @@ export default function DashboardLayout({
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="fixed inset-y-0 right-0 w-[280px] bg-white z-[70] shadow-2xl flex flex-col lg:hidden"
             >
-              <SidebarContent />
+              <Sidebar
+                menuConfig={menuConfig}
+                user={user}
+                activePath={location.pathname}
+                onNavigate={handleNavigate}
+                onLogout={handleLogout}
+              />
             </motion.aside>
           </>
         )}

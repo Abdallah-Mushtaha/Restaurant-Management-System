@@ -5,8 +5,18 @@ export const API_URL = import.meta.env.VITE_LOCAL_API_URL || "http://localhost:3
 
 const api = axios.create({
   baseURL: API_URL,
-  
 });
+
+export const visitsApi = {
+  getAll: async () => {
+    const { data } = await api.get("/visits");
+    return data;
+  },
+  updateStatus: async (id: string, status: "active" | "inactive") => {
+    const { data } = await api.patch(`/visits/${id}`, { status });
+    return data;
+  }
+};
 
 export const guestService = {
   checkTableStatus: async (tableNumber: number) => {
@@ -39,7 +49,6 @@ export const ordersApi = {
   }
 };
 
-
 export const authApi = {
   login: async (credentials: { email: string; password: string }) => {
     const { data: users } = await api.get<any[]>("/users");
@@ -56,5 +65,3 @@ export const authApi = {
     return { success: false };
   }
 };
-
-

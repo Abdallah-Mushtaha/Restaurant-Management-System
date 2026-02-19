@@ -17,7 +17,7 @@ export default function Login({ onLogin }: { onLogin: (user: any) => void }) {
       onLogin(user);
 
       const routes: Record<string, string> = {
-        cashier: "/order",
+        cashier: "/cashier",
         kitchen: "/kitchen",
         admin: "/admin",
       };
