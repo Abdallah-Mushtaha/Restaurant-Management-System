@@ -5,6 +5,7 @@ export const API_URL = import.meta.env.VITE_LOCAL_API_URL || "http://localhost:3
 
 const api = axios.create({
   baseURL: API_URL,
+  
 });
 
 export const guestService = {
@@ -25,3 +26,35 @@ export const orderService = {
     return data;
   }
 };
+
+export const ordersApi = {
+  getAll: async () => {
+    const { data } = await api.get("/orders");
+    return data;
+  },
+
+  updateStatus: async (id: string, status: string) => {
+    const { data } = await api.patch(`/orders/${id}`, { status });
+    return data;
+  }
+};
+
+
+export const authApi = {
+  login: async (credentials: { email: string; password: string }) => {
+    const { data: users } = await api.get<any[]>("/users");
+    const user = users.find(
+      (u) => u.email === credentials.email && u.password === credentials.password
+    );
+
+    if (user) {
+      return {
+        success: true,
+        data: { user }
+      };
+    }
+    return { success: false };
+  }
+};
+
+

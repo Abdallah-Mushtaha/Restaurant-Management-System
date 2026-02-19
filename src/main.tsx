@@ -8,6 +8,11 @@ import CustomerEntry from "./pages/CustomerEntry.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import MenuPage from "./pages/MenuPage.tsx";
 import CartPage from "./pages/CartPage.tsx";
+import Login from "./pages/Login.tsx";
+import KitchenDashboard from "./pages/KitchenDashboard.tsx";
+import NewOrders from "./pages/NewOrders.tsx";
+import PreparingOrders from "./pages/PreparingOrders.tsx";
+import CompletedOrders from "./pages/CompletedOrders.tsx";
 
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
@@ -21,6 +26,24 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/menu" element={<MenuPage />} />
           <Route path="*" element={<App />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route
+            path="/login"
+            element={<Login onLogin={(u) => console.log(u)} />}
+          />
+          <Route
+            path="/kitchen"
+            element={
+              <KitchenDashboard
+                onLogout={() => {
+                  localStorage.clear();
+                  window.location.href = "/login";
+                }}
+              />
+            }
+          />
+          <Route path="/kitchen/new" element={<NewOrders />} />
+          <Route path="/kitchen/preparing" element={<PreparingOrders />} />
+          <Route path="/kitchen/completed" element={<CompletedOrders />} />
         </Routes>
       </QueryClientProvider>
     </StrictMode>

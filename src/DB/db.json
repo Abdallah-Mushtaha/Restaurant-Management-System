@@ -1,4 +1,20 @@
 {
+  "users": [
+    {
+      "id": "u1",
+      "name": "أحمد الكاشير",
+      "email": "cashier@restaurant.com",
+      "password": "123456",
+      "role": "cashier"
+    },
+    {
+      "id": "u2",
+      "name": "الشيف عمر",
+      "email": "kitchen@restaurant.com",
+      "password": "123456",
+      "role": "kitchen"
+    }
+  ],
   "visits": [
     {
       "id": "d2ae",
@@ -27,6 +43,13 @@
       "guestName": "علي",
       "status": "active",
       "entryTime": "2026-02-18T18:53:18.367Z"
+    },
+    {
+      "id": "7f04",
+      "tableNumber": 19,
+      "guestName": "نضال",
+      "status": "active",
+      "entryTime": "2026-02-19T14:08:06.489Z"
     }
   ],
   "menu": [
@@ -259,7 +282,7 @@
         }
       ],
       "totalAmount": 217,
-      "status": "pending",
+      "status": "ready",
       "createdAt": "2026-02-18T18:49:59.271Z"
     },
     {
@@ -282,8 +305,119 @@
         }
       ],
       "totalAmount": 217,
-      "status": "pending",
+      "status": "ready",
       "createdAt": "2026-02-18T18:53:27.492Z"
+    },
+    {
+      "id": "ORD-42JVCOL",
+      "visitId": "7f04",
+      "guestName": "نضال",
+      "tableNumber": 19,
+      "items": [
+        {
+          "id": "o2",
+          "name": "عرض شاورما شيك دجاج",
+          "quantity": 1,
+          "price": 75
+        },
+        {
+          "id": "o3",
+          "name": "عرض ربع فرخة ورك مشوية",
+          "quantity": 1,
+          "price": 95
+        },
+        {
+          "id": "o4",
+          "name": "عرض سناك بروستد",
+          "quantity": 1,
+          "price": 122
+        }
+      ],
+      "totalAmount": 292,
+      "status": "received",
+      "createdAt": "2026-02-19T14:08:20.551Z"
+    },
+    {
+      "id": "ORD-QKKFCU7",
+      "visitId": "7f04",
+      "guestName": "نضال",
+      "tableNumber": 19,
+      "items": [
+        {
+          "id": "m2",
+          "name": "حمص باللحم",
+          "quantity": 1,
+          "price": 254
+        },
+        {
+          "id": "m3",
+          "name": "طبق بطاطس بالشيدر",
+          "quantity": 1,
+          "price": 64
+        },
+        {
+          "id": "m4",
+          "name": "طبق يالنجي (ورق عنب)",
+          "quantity": 1,
+          "price": 57
+        },
+        {
+          "id": "s3",
+          "name": "ساندوتش شاورما فراخ صاج",
+          "quantity": 1,
+          "price": 100
+        },
+        {
+          "id": "s2",
+          "name": "وجبة شاورما لحم عربي",
+          "quantity": 1,
+          "price": 229
+        },
+        {
+          "id": "m1",
+          "name": "طبق أرز بالمكسرات",
+          "quantity": 1,
+          "price": 89
+        }
+      ],
+      "totalAmount": 793,
+      "status": "completed",
+      "createdAt": "2026-02-19T14:08:33.353Z"
+    },
+    {
+      "id": "ORD-0L41L25",
+      "visitId": "7f04",
+      "guestName": "نضال",
+      "tableNumber": 19,
+      "items": [
+        {
+          "id": "h2",
+          "name": "وافل مكس فروت",
+          "quantity": 1,
+          "price": 143
+        },
+        {
+          "id": "d2",
+          "name": "إمبراطور مكس فروت",
+          "quantity": 1,
+          "price": 191
+        },
+        {
+          "id": "d3",
+          "name": "عيران كبير",
+          "quantity": 1,
+          "price": 49
+        },
+        {
+          "id": "d1",
+          "name": "عصير ليمون نعناع 300 مل",
+          "quantity": 1,
+          "price": 64
+        }
+      ],
+      "totalAmount": 447,
+      "status": "pending",
+      "createdAt": "2026-02-19T14:08:45.410Z"
     }
   ]
 }
