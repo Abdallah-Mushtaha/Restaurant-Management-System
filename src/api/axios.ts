@@ -42,11 +42,15 @@ export const ordersApi = {
     const { data } = await api.get("/orders");
     return data;
   },
-
+getByVisitId: async (visitId: string) => {
+    const { data } = await api.get(`/orders?visitId=${visitId}`);
+    return data;
+  },
   updateStatus: async (id: string, status: string) => {
     const { data } = await api.patch(`/orders/${id}`, { status });
     return data;
   }
+  
 };
 
 export const authApi = {

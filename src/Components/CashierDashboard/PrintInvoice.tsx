@@ -19,13 +19,13 @@ export const PrintInvoice = ({ order }: any) => {
             <tr key={idx} className="border-b border-gray-200">
               <td className="py-2">{item.name}</td>
               <td>{item.quantity}</td>
-              <td>{item.price * item.quantity} ر.س</td>
+              <td>{item.price * item.quantity} جنيه مصري</td>
             </tr>
           ))}
         </tbody>
       </table>
       <div className="text-left font-black text-xl">
-        الإجمالي: {order.totalAmount} ر.س
+        الإجمالي: {order.totalAmount} جنيه مصري
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export const CompletedOrderCard = ({ order }: any) => (
       <span className="text-green-600 font-black text-xs">تم الدفع</span>
     </div>
     <div className="text-xl font-black text-gray-800">
-      {order.totalAmount} ر.س
+      {order.totalAmount} جنيه مصري
     </div>
     <div className="text-xs text-gray-400 mt-2">
       {new Date(order.createdAt).toLocaleString("ar-EG")}

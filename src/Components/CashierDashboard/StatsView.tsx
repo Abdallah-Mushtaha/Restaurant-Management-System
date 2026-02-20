@@ -6,7 +6,7 @@ export const StatsView = ({ total }: { total: number }) => (
       <div>
         <p className="text-gray-500 font-bold text-sm">إجمالي مبيعات اليوم</p>
         <h3 className="text-4xl font-black text-green-600 mt-2">
-          {total} <span className="text-sm">ر.س</span>
+          {total} <span className="text-sm">جنيه مصري</span>
         </h3>
       </div>
       <div className="bg-green-50 p-4 rounded-2xl text-green-600">

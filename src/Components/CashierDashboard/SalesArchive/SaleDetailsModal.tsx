@@ -48,7 +48,7 @@ export const SaleDetailsModal = ({
                   <span className="font-bold text-gray-700">{item.name}</span>
                 </div>
                 <span className="font-black text-gray-900">
-                  {item.price * item.quantity} ر.س
+                  {item.price * item.quantity} جنيه مصري
                 </span>
               </div>
             ))}
@@ -58,7 +58,7 @@ export const SaleDetailsModal = ({
           <div className="flex justify-between items-center">
             <span className="font-black text-gray-500">الإجمالي الكلي</span>
             <span className="text-2xl font-black text-blue-600">
-              {sale.total.toFixed(2)} ر.س
+              {sale.total.toFixed(2)} جنيه مصري
             </span>
           </div>
           <button

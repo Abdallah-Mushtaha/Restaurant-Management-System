@@ -25,7 +25,7 @@ export const SalesTable = React.memo(({ sales, onSelect, onPrint }: any) => (
             <td className="p-5 text-gray-500 text-sm">{sale.date}</td>
             <td className="p-5 font-bold">{sale.itemsCount}</td>
             <td className="p-5 text-blue-700 font-black">
-              {sale.total.toFixed(2)} ر.س
+              {sale.total.toFixed(2)} جنيه مصري
             </td>
             <td className="p-5 text-sm">{sale.method}</td>
             <td className="p-5">
@@ -58,7 +58,7 @@ export const SalesTable = React.memo(({ sales, onSelect, onPrint }: any) => (
               طاولة #{sale.tableNumber}
             </span>
             <span className="text-blue-700 font-black">
-              {sale.total.toFixed(2)} ر.س
+              {sale.total.toFixed(2)} جنيه مصري
             </span>
           </div>
           <div className="flex justify-between text-xs text-gray-500 font-medium">

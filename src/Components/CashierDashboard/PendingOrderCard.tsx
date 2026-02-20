@@ -19,7 +19,7 @@ export const PendingOrderCard = ({ order, onPrint, onPayment }: any) => (
             <small className="text-blue-500">×{item.quantity}</small>
           </span>
           <span className="font-black text-gray-800">
-            {item.price * item.quantity} ر.س
+            {item.price * item.quantity} جنيه مصري
           </span>
         </div>
       ))}
@@ -29,7 +29,7 @@ export const PendingOrderCard = ({ order, onPrint, onPayment }: any) => (
       <div className="flex justify-between items-center">
         <span className="text-gray-500 font-bold">المطلوب دفعه:</span>
         <span className="text-2xl font-black text-blue-600">
-          {order.totalAmount} ر.س
+          {order.totalAmount} جنيه مصري
         </span>
       </div>
     </div>

@@ -33,11 +33,15 @@ export const CategoryBar = ({ categories, active, onSelect }: any) => (
   </div>
 );
 
-export const FloatingCart = () => {
-  const navigate = useNavigate();
-  const totalItems = useCartStore((state) => state.getTotalItems());
-  const totalPrice = useCartStore((state) => state.getTotalPrice());
-
+export const FloatingCart = ({
+  totalItems,
+  totalPrice,
+  onClick,
+}: {
+  totalItems: number;
+  totalPrice: number;
+  onClick: () => void;
+}) => {
   if (totalItems === 0) return null;
 
   return (
@@ -65,7 +69,7 @@ export const FloatingCart = () => {
 
         <button
           className="bg-orange-600 cursor-pointer hover:bg-orange-500 text-white px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-black text-xs md:text-sm active:scale-95 transition-all shadow-lg shadow-orange-900/40"
-          onClick={() => navigate("/cart")}
+          onClick={onClick}
         >
           إتمام الطلب
         </button>

@@ -1,15 +1,14 @@
 import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Loader2 } from "lucide-react";
-import { useMenu } from "../hooks/MenuPage/useMenu";
-import { useCartStore } from "../store/useCartStore";
 import { MenuNavbar } from "../Components/MenuComponents/Navbar";
 import { BentoOffers } from "../Components/MenuComponents/BentoOffers";
 import { MenuFilters } from "../Components/MenuComponents/MenuFilters";
 import { FloatingCart } from "../Components/MenuComponents/MenuComponents";
 import { MenuCard } from "../Components/MenuComponents/MenuCard";
 import { MenuSkeleton } from "../Components/MenuComponents/MenuSkeleton";
+import { useMenu } from "../hooks/MenuPage/useMenu";
+import { useCartStore } from "../store/useCartStore";
 
 export default function MenuPage() {
   const navigate = useNavigate();
@@ -83,7 +82,6 @@ export default function MenuPage() {
             <div className="w-2 h-6 bg-orange-600 rounded-full" />
             {activeCategory}
           </h2>
-
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             <AnimatePresence mode="popLayout">
               {filteredMenu.map((item: any) => (

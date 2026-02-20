@@ -56,11 +56,6 @@ export default function DashboardLayout({
             path: "/admin/products",
           },
           {
-            label: "الفئات",
-            icon: <Layers size={20} />,
-            path: "/admin/categories",
-          },
-          {
             label: "الحسابات",
             icon: <Users size={20} />,
             path: "/admin/accounts",

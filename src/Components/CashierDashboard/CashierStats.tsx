@@ -73,7 +73,7 @@ export default function CashierStats({ onLogout }: { onLogout: () => void }) {
               </p>
               <h2 className="text-3xl font-black mt-1">
                 {stats.totalSales.toFixed(2)}{" "}
-                <span className="text-sm">ر.س</span>
+                <span className="text-sm">جنيه مصري</span>
               </h2>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function CashierStats({ onLogout }: { onLogout: () => void }) {
               <p className="text-gray-400 text-sm font-medium">الدفع النقدي</p>
               <h2 className="text-3xl font-black mt-1 text-gray-800">
                 {stats.cashSales.toFixed(2)}{" "}
-                <span className="text-sm text-gray-400">ر.س</span>
+                <span className="text-sm text-gray-400">جنيه مصري</span>
               </h2>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function CashierStats({ onLogout }: { onLogout: () => void }) {
               </p>
               <h2 className="text-3xl font-black mt-1 text-gray-800">
                 {stats.cardSales.toFixed(2)}{" "}
-                <span className="text-sm text-gray-400">ر.س</span>
+                <span className="text-sm text-gray-400">جنيه مصري</span>
               </h2>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function CashierStats({ onLogout }: { onLogout: () => void }) {
                     {item.time}
                   </span>
                   <span className="text-sm font-black text-blue-700">
-                    {item.amount.toLocaleString()} ر.س
+                    {item.amount.toLocaleString()} جنيه مصري
                   </span>
                 </div>
                 <div className="w-full bg-gray-50 h-3 rounded-full overflow-hidden">

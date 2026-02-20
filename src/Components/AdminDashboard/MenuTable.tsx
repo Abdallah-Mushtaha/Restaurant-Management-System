@@ -45,7 +45,8 @@ export const MenuTable = ({ data }: { data: any[] }) => (
               </td>
               <td className="p-5 text-gray-500 font-bold">{item.category}</td>
               <td className="p-5 font-black text-gray-900 text-lg">
-                {item.price} <small className="text-orange-600">ر.س</small>
+                {item.price}{" "}
+                <small className="text-orange-600">جنيه مصري</small>
               </td>
               <td className="p-5 text-center">
                 <div className="flex justify-center gap-2">

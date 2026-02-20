@@ -113,13 +113,15 @@ export default function SalesArchive({ onLogout }: { onLogout: () => void }) {
               <tr key={i} className="border-b border-gray-100">
                 <td className="py-2">{item.name}</td>
                 <td className="text-center">{item.quantity}</td>
-                <td className="text-left">{item.price * item.quantity} ر.س</td>
+                <td className="text-left">
+                  {item.price * item.quantity} جنيه مصري
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className="text-left font-black text-xl">
-          المجموع: {selectedSale?.total.toFixed(2)} ر.س
+          المجموع: {selectedSale?.total.toFixed(2)} جنيه مصري
         </div>
       </div>
     </DashboardLayout>

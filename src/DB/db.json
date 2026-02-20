@@ -30,7 +30,8 @@
       "category": "العروض",
       "image": "https://th.bing.com/th/id/OIP.HoT-y-SFmsnSkbwylefdHQHaE8?w=229&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
       "description": "عرض خاص لفترة محدودة",
-      "isPopular": true
+      "isPopular": true,
+      "prepTime": "15"
     },
     {
       "id": "o2",
@@ -39,7 +40,8 @@
       "category": "العروض",
       "image": "https://th.bing.com/th/id/OIP.9UlpXM5nfd0MEi81aQnvTgHaDt?w=350&h=175&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
       "description": "عرض التوفير لمحبي الدجاج",
-      "isPopular": true
+      "isPopular": true,
+      "prepTime": "15"
     },
     {
       "id": "o3",
@@ -48,7 +50,8 @@
       "category": "العروض",
       "image": "https://th.bing.com/th/id/OIP.9kJV8fMouwb74OisL27poAAAAA?w=237&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
       "description": "على الفحم مع أرز وثومية",
-      "isPopular": true
+      "isPopular": true,
+      "prepTime": "15"
     },
     {
       "id": "o4",
@@ -56,7 +59,8 @@
       "price": 122,
       "category": "العروض",
       "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800&auto=format&fit=crop",
-      "description": "قطع بروستد مقرمشة مع بطاطس"
+      "description": "قطع بروستد مقرمشة مع بطاطس",
+      "prepTime": "20"
     },
     {
       "id": "m1",
@@ -212,7 +216,8 @@
       "price": 49,
       "category": "المشروبات",
       "image": "https://tse3.mm.bing.net/th/id/OIP.uomTk3Bd5Z2a3Vp61S1e_QAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
-      "description": "لبن عيران بارد ومنعش"
+      "description": "لبن عيران بارد ومنعش",
+      "prepTime": "15"
     },
     {
       "id": "h1",
@@ -233,39 +238,18 @@
   ],
   "visits": [
     {
-      "id": "58ff",
+      "id": "1cdd",
       "tableNumber": 10,
-      "guestName": "علي",
+      "guestName": "علاء",
       "status": "inactive",
-      "entryTime": "2026-02-19T19:02:25.646Z"
-    },
-    {
-      "id": "6d62",
-      "tableNumber": 10,
-      "guestName": "جهان",
-      "status": "inactive",
-      "entryTime": "2026-02-19T19:06:58.939Z"
-    },
-    {
-      "id": "8dfa",
-      "tableNumber": 10,
-      "guestName": "emy",
-      "status": "active",
-      "entryTime": "2026-02-19T21:31:23.717Z"
-    },
-    {
-      "id": "f1a5",
-      "tableNumber": 11,
-      "guestName": "ضيف طاولة 11",
-      "status": "active",
-      "entryTime": "2026-02-20T15:03:30.182Z"
+      "entryTime": "2026-02-20T22:04:40.612Z"
     }
   ],
   "orders": [
     {
-      "id": "ORD-NVGI2K6",
-      "visitId": "58ff",
-      "guestName": "علي",
+      "id": "ORD-F9ADW8C",
+      "visitId": "1cdd",
+      "guestName": "علاء",
       "tableNumber": 10,
       "items": [
         {
@@ -287,120 +271,27 @@
           "price": 95
         },
         {
-          "id": "o4",
-          "name": "عرض سناك بروستد",
-          "quantity": 1,
-          "price": 122
-        },
-        {
           "id": "m3",
           "name": "طبق بطاطس بالشيدر",
           "quantity": 2,
           "price": 64
         },
         {
-          "id": "s3",
-          "name": "ساندوتش شاورما فراخ صاج",
+          "id": "d2",
+          "name": "إمبراطور مكس فروت",
           "quantity": 1,
-          "price": 100
+          "price": 191
         },
         {
-          "id": "p2",
-          "name": "بيتزا تشكن رانش وسط",
+          "id": "d1",
+          "name": "عصير ليمون نعناع 300 مل",
           "quantity": 1,
-          "price": 186
+          "price": 64
         }
       ],
-      "totalAmount": 786,
+      "totalAmount": 633,
       "status": "completed",
-      "createdAt": "2026-02-19T19:04:06.674Z"
-    },
-    {
-      "id": "ORD-63FPYOQ",
-      "visitId": "6d62",
-      "guestName": "جهان",
-      "tableNumber": 10,
-      "items": [
-        {
-          "id": "o4",
-          "name": "عرض سناك بروستد",
-          "quantity": 1,
-          "price": 122
-        },
-        {
-          "id": "m4",
-          "name": "طبق يالنجي (ورق عنب)",
-          "quantity": 1,
-          "price": 57
-        },
-        {
-          "id": "s3",
-          "name": "ساندوتش شاورما فراخ صاج",
-          "quantity": 1,
-          "price": 100
-        },
-        {
-          "id": "g3",
-          "name": "توشكا على الفحم",
-          "quantity": 2,
-          "price": 146
-        }
-      ],
-      "totalAmount": 571,
-      "status": "completed",
-      "createdAt": "2026-02-19T19:07:13.844Z"
-    },
-    {
-      "id": "ORD-AOXKRP4",
-      "visitId": "6d62",
-      "guestName": "جهان",
-      "tableNumber": 10,
-      "items": [
-        {
-          "id": "o4",
-          "name": "عرض سناك بروستد",
-          "quantity": 1,
-          "price": 122
-        },
-        {
-          "id": "o3",
-          "name": "عرض ربع فرخة ورك مشوية",
-          "quantity": 1,
-          "price": 95
-        }
-      ],
-      "totalAmount": 217,
-      "status": "completed",
-      "createdAt": "2026-02-19T19:19:30.542Z"
-    },
-    {
-      "id": "ORD-8TXTXV4",
-      "visitId": "8dfa",
-      "guestName": "emy",
-      "tableNumber": 10,
-      "items": [
-        {
-          "id": "o2",
-          "name": "عرض شاورما شيك دجاج",
-          "quantity": 1,
-          "price": 75
-        },
-        {
-          "id": "o3",
-          "name": "عرض ربع فرخة ورك مشوية",
-          "quantity": 1,
-          "price": 95
-        },
-        {
-          "id": "o4",
-          "name": "عرض سناك بروستد",
-          "quantity": 1,
-          "price": 122
-        }
-      ],
-      "totalAmount": 292,
-      "status": "completed",
-      "createdAt": "2026-02-19T21:31:31.741Z"
+      "createdAt": "2026-02-20T22:05:02.590Z"
     }
   ]
 }

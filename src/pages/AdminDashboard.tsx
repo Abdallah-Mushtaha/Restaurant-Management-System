@@ -53,7 +53,7 @@ export default function AdminDashboard({ onLogout }: { onLogout: () => void }) {
                     <ModernStatCard
                       title="إجمالي الدخل"
                       value={stats.totalRevenue}
-                      suffix="ر.س"
+                      suffix="جنيه مصري"
                       icon={<BarChart3 />}
                       trend="+12.5%"
                       color="bg-gradient-to-br from-orange-500 to-amber-600"
