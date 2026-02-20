@@ -13,6 +13,13 @@
       "email": "kitchen@gmail.com",
       "password": "123456",
       "role": "kitchen"
+    },
+    {
+      "id": "u3",
+      "name": "مدير النظام",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "role": "admin"
     }
   ],
   "menu": [
@@ -245,6 +252,13 @@
       "guestName": "emy",
       "status": "active",
       "entryTime": "2026-02-19T21:31:23.717Z"
+    },
+    {
+      "id": "f1a5",
+      "tableNumber": 11,
+      "guestName": "ضيف طاولة 11",
+      "status": "active",
+      "entryTime": "2026-02-20T15:03:30.182Z"
     }
   ],
   "orders": [

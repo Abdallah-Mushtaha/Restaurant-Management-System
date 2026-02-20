@@ -16,6 +16,7 @@ import CompletedOrders from "./Components/KitchenDashboard/CompletedOrders.tsx";
 import CashierDashboard from "./pages/CashierDashboard.tsx";
 import SalesDashboard from "./Components/CashierDashboard/SalesDashboard.tsx";
 import CashierStats from "./Components/CashierDashboard/CashierStats.tsx";
+import AdminDashboard from "./pages/AdminDashboard.tsx";
 
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
@@ -79,6 +80,11 @@ createRoot(document.getElementById("root")!).render(
                 }}
               />
             }
+          />
+          {/* Admin Dashboard Route */}
+          <Route
+            path="/admin"
+            element={<AdminDashboard onLogout={() => {}} />}
           />
         </Routes>
       </QueryClientProvider>
