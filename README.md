@@ -1,4 +1,4 @@
-# Project: Restaurant Management System "Mat'amna"
+# Restaurant Management System "Mat'amna"
 
 Comprehensive, large-scale restaurant management system fully in Arabic (RTL support) with modern dashboards for different roles.
 
@@ -130,13 +130,39 @@ Comprehensive, large-scale restaurant management system fully in Arabic (RTL sup
    cd <repo_folder>
    ```
 2. Install dependencies:
+
    ```bash
    npm install
    ```
-3. Start the app:
+
+3. Run the app:
+
    ```bash
+   # Run frontend
    npm run dev
    ```
-4. Open the app in your browser:
-   [http://localhost:5173/](http://localhost:5173/)
-5. Enjoy!
+
+4. Run backend
+
+   ```bash
+   # Run mock backend
+   npm run backend
+   ```
+
+5.Build project
+
+```bash
+# Build project
+npm run build
+
+# Preview production build
+npm run preview
+
+```
+
+---
+
+Open the app in your browser:
+[http://localhost:5173/](http://localhost:5173/)
+
+Enjoy!
