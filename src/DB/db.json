@@ -236,62 +236,6 @@
       "description": "وافل مقرمش مع فواكه طازجة وشوكولاتة"
     }
   ],
-  "visits": [
-    {
-      "id": "1cdd",
-      "tableNumber": 10,
-      "guestName": "علاء",
-      "status": "inactive",
-      "entryTime": "2026-02-20T22:04:40.612Z"
-    }
-  ],
-  "orders": [
-    {
-      "id": "ORD-F9ADW8C",
-      "visitId": "1cdd",
-      "guestName": "علاء",
-      "tableNumber": 10,
-      "items": [
-        {
-          "id": "o1",
-          "name": "عرض شاورما شيك لحم",
-          "quantity": 1,
-          "price": 80
-        },
-        {
-          "id": "o2",
-          "name": "عرض شاورما شيك دجاج",
-          "quantity": 1,
-          "price": 75
-        },
-        {
-          "id": "o3",
-          "name": "عرض ربع فرخة ورك مشوية",
-          "quantity": 1,
-          "price": 95
-        },
-        {
-          "id": "m3",
-          "name": "طبق بطاطس بالشيدر",
-          "quantity": 2,
-          "price": 64
-        },
-        {
-          "id": "d2",
-          "name": "إمبراطور مكس فروت",
-          "quantity": 1,
-          "price": 191
-        },
-        {
-          "id": "d1",
-          "name": "عصير ليمون نعناع 300 مل",
-          "quantity": 1,
-          "price": 64
-        }
-      ],
-      "totalAmount": 633,
-      "status": "completed",
-      "createdAt": "2026-02-20T22:05:02.590Z"
-    }
-  ]
+  "visits":[],
+  "orders":[]
 }

@@ -72,7 +72,9 @@ export default function NewOrders() {
               <OrderCard
                 key={order.id}
                 order={order}
-                onMoveStatus={handleMoveStatus}
+                status="pending"
+                onUpdate={handleMoveStatus}
+                config={{ border: "border-rose-100" }}
               />
             ))}
           </AnimatePresence>
